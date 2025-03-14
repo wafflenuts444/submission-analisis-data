@@ -145,7 +145,7 @@ if dataset_option == "Day":
 #membuat kategori suhu
 if dataset_option == "Day":
     bins = [0, 0.3, 0.6, 1] 
-    labels = ["Dingin", "Normal", "Panas"]
+    labels = ["cold", "normal", "hot"]
     day["temp_category"] = pd.cut(day["temp"], bins=bins, labels=labels)
 
     #menghitung total penggunaan sepeda berdasarkan kategori suhu
@@ -166,9 +166,9 @@ if dataset_option == "Day":
     st.write("""
     Hasil analisis menunjukkan adanya perbedaan jumlah penggunaan sepeda berdasarkan kategori suhu:
 
-    - ❄️ **Dingin:** Penggunaan sepeda paling rendah.
+    - ❄️ **Cold:** Penggunaan sepeda paling rendah.
     - 🌤️ **Normal:** Penggunaan sepeda tertinggi.
-    - ☀️ **Panas:** Penggunaan sepeda masih cukup tinggi, meskipun sedikit lebih rendah dari kategori normal.
+    - ☀️ **Hot:** Penggunaan sepeda masih cukup tinggi, meskipun sedikit lebih rendah dari kategori normal.
 
     📌 **Kesimpulan & Rekomendasi:**
     - Saat suhu dingin, persediaan sepeda dapat dikurangi atau penyedia layanan dapat memberikan **diskon** agar jumlah pengguna tetap stabil.
